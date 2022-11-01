@@ -122,6 +122,26 @@ mT5 Large | [mt5/large.gin](https://github.com/google-research/t5x/blob/main/t5x
 mT5 XL    | [mt5/xl.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/xl.gin)       | [gs://t5-data/pretrained_models/t5x/mt5_xl/checkpoint_1000000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_xl)
 mT5 XXL   | [mt5/xxl.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/xxl.gin)     | [gs://t5-data/pretrained_models/t5x/mt5_xxl/checkpoint_1000000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_xxl)
 
+#### mT5 LM-Adapted Checkpoints
+
+These are the checkpoints released as part of the [XGen paper](https://arxiv.org/abs/2205.12647).
+
+These "LM-adapted" models are initialized from mT5 (above) and trained for an
+additional 100K steps on the LM objective discussed in the [T5 paper](https://arxiv.org/abs/1910.10683). 
+
+This adaptation improves the ability of the model to be used for [prompt tuning](https://arxiv.org/abs/2104.08691).
+
+**Vocabulary:**
+[mc4.250000.100extra](https://console.cloud.google.com/storage/browser/t5-data/vocabs/mc4.250000.100extra)
+
+Model                | Gin File Location                                                                                                   | Checkpoint Location
+-------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------
+mT5 LM-100K Small | [mt5/small.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/small.gin) | [mt5_lm100k_small/checkpoint_1100000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_lm100k_small)
+mT5 LM-100K Base | [mt5/base.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/base.gin) | [mt5_lm100k_base/checkpoint_1100000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_lm100k_base)
+mT5 LM-100K Large | [mt5/large.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/large.gin) | [mt5_lm100k_large/checkpoint_1100000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_lm100k_large)
+mT5 LM-100K XL | [mt5/xl.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/xl.gin) | [mt5_lm100k_xl/checkpoint_1100000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_lm100k_xl)
+mT5 LM-100K XXL | [mt5/xxl.gin](https://github.com/google-research/t5x/blob/main/t5x/examples/t5/mt5/xxl.gin) | [mt5_lm100k_xxl/checkpoint_1100000](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mt5_lm100k_xxl)
+
 #### ByT5 Checkpoints
 
 These are the checkpoints used in the paper [ByT5: Towards a Token-Free Future
